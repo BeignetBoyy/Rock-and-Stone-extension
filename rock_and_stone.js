@@ -9,7 +9,7 @@ function replaceTextOnPage(from, to){
     if(!node.nodeValue.toLowerCase().includes(to.toLowerCase())){
         // we check wether the node contains our from string (avoids some pages from breaking)
         if(node.nodeValue.toLowerCase().includes(from.toLowerCase())){
-            node.nodeValue = node.nodeValue.toLowerCase().replace(new RegExp(quote(from), 'g'), to);
+            node.nodeValue = node.nodeValue.toLowerCase().replace((new RegExp(quote(from), 'g')), to);
         }
     }
   });
@@ -34,3 +34,4 @@ function replaceTextOnPage(from, to){
 }
 
 replaceTextOnPage("rock", "Rock and Stone")
+replaceTextOnPage("stone", "Rock and Stone")
