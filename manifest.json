@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Rock and Stone !",
+  "version": "1.0",
+
+  "description": "Replaces all instances of the word Rock by Rock and Stone !",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["rock_and_stone.js"]
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+        "id": "rock@stone.com"
+    }
+  }
+}
